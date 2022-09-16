@@ -30,6 +30,8 @@ def api_viz(crypto):
 
     fig = go.Figure( data=[go.Candlestick(x=dates, open=open, high=high, low=low, close=close)] )  
     
+    fig.update_layout(title=crypto)
+    
     graph = json.dumps(fig.show(), cls=plotly.utils.PlotlyJSONEncoder)
     
     return render_template('graph.html', plot=graph)
