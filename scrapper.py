@@ -32,7 +32,3 @@ def get_data(crypto, num_days):
     driver.quit()
     
     return output
-
-    
-
-    
